@@ -1,0 +1,754 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// This includes all of the foundation global elements that are needed to work with any of the other files.
+@import "foundation/variables";
+
+// Foundation Components
+// @import
+//   "foundation/components/global",
+//   "foundation/components/grid",
+//   "foundation/components/visibility",
+//   "foundation/components/block-grid",
+//   "foundation/components/type",
+//   "foundation/components/buttons",
+//   "foundation/components/forms",
+//   "foundation/components/button-groups",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/split-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/section",
+//   "foundation/components/top-bar",
+//   "foundation/components/orbit",
+//   "foundation/components/reveal",
+//   "foundation/components/joyride",
+//   "foundation/components/clearing",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/custom-forms",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/inline-lists",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/side-nav",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switch",
+//   "foundation/components/magellan",
+//   "foundation/components/tables",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/dropdown",
+//   "foundation/components/fonts";
+@import
+  "foundation/components/global",
+  "foundation/components/grid-5",
+  "foundation/components/visibility",
+  "foundation/components/block-grid",
+  "foundation/components/panels",
+  "foundation/components/type",
+  "foundation/components/fonts",
+  "data";
+
+//Fonts
+@include set-font("Source Sans Pro","source-sans-pro/SourceSansPro-Regular");
+@include set-font("Kameron","kameron/kameron-regular");
+@include set-font("Museo Slab","museo/museo-slab-500");
+@include set-font("Museo Sans","museo/museo-sans-500");
+
+
+//Custom Variables
+$menu-transition: 45em;
+
+$small-medium: 33em;
+@media only screen and (min-width: $small-medium){
+  @for $i from 1 through $total-columns {
+    .small-medium#{-$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
+  }
+}
+
+//Custom Mixins
+
+@mixin block-glow($glow-color:fade-out($black, .85)) {
+  @if $experimental {
+      -webkit-box-shadow: 0 0 .5em .1em $glow-color;
+      -moz-box-shadow: 0 0 .5em .1em $glow-color;
+    box-shadow: 0 0 .5em .1em $glow-color;
+    border-color: $glow-color;
+  }
+}
+@mixin subtle-glow($glow-color:fade-out($black, .75)) {
+  @if $experimental {
+      -webkit-box-shadow: 0 0.25em 1.5em -0.625em $glow-color;
+      -moz-box-shadow: 0 0.25em 1.5em -0.625em $glow-color;
+    box-shadow: 0 0.25em 1.5em -0.625em $glow-color;
+    border: 0.0625em solid fade-out($glow-color, .1);
+  }
+}
+
+//Custom
+.museo-sans{
+  font-family: "Museo Sans", "Helvetica", Helvetica, Arial, sans-serif;
+}
+.museo-slab{
+  font-family: "Museo Slab", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+  // @media #{$small} {
+.heading-text { line-height: $header-line-height; }
+.heading-1 { font-size: $h1-font-size; }
+.heading-2 { font-size: $h2-font-size; }
+.heading-3 { font-size: $h3-font-size; }
+.heading-4 { font-size: $h4-font-size; }
+.heading-5 { font-size: $h5-font-size; }
+.heading-6 { font-size: $h6-font-size; }
+.heading-7 { font-size: 80% }
+
+ul{
+  margin-left: 1em;
+}
+
+  // }
+
+body{
+  background-color: $white;
+  @if $experimental {
+    background: -moz-linear-gradient(left,$white 0%, darken($white, 1%) 100%);
+    background: -webkit-linear-gradient(left, $white 0%, darken($white, 1%) 100%);
+  }
+  background: linear-gradient(to right, $white 0%, darken($white, 1%) 100%);
+
+}
+
+.brown-panel { 
+  @include panel($brown, 1.25em 0);
+  
+  @media only screen and (min-width: $menu-transition){
+    @include panel($brown, 2.5em 0);
+  }
+}
+
+.content-area{
+  margin:4em 0;
+  background-color: lighten($white, 5%);
+
+  //Mixins
+  @include block-glow();
+}
+.interior-content{
+  padding-top: 1.25em;
+  padding-bottom: 1.5em;
+
+}
+.logo{
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  @media only screen and (min-width: $menu-transition){
+    width: 3em;
+    height: 3em;
+  }
+}
+.header{
+  background-color: $dark-grey;
+  color: $white;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  border-bottom: .5em solid $orange;
+  .logo-text{
+    display: inline-block;
+    font-size: 1.25em;
+    vertical-align: middle;
+    padding-top: .25em;
+    margin-left: .25em;
+    color: $white;
+  }
+  img{
+    display: inline-block;
+  }
+  @media only screen and (min-width: $menu-transition){
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+}
+// Menu toggle button on small devices
+.menu-icon {
+  text-align: right;
+  display: block;
+  padding: .6em 0 .25em;
+  a {
+    color: $white;
+    text-transform: uppercase;
+    position: relative;
+    padding-right: 1.5em;
+
+    &:after {
+      content: "";
+      //#{$opposite-direction}: 0;
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 0;
+      top: -10px;
+      right: 0;
+      // Shh, don't tell, but box-shadows create the menu icon :)
+      @if $experimental {
+        -webkit-box-shadow: 0 10px 0 1px $white,
+                            0 16px 0 1px $white,
+                            0 22px 0 1px $white;
+      }
+      box-shadow:         0 10px 0 1px $white,
+                          0 16px 0 1px $white,
+                          0 22px 0 1px $white;
+    }
+
+  }
+  @media only screen and (min-width: $menu-transition){
+    display: none;
+  }
+}
+.menu-bar{
+  display: none;
+  a{
+    font-size: 1.25em;
+    color: $white;
+    padding: .5em;
+    @include single-transition(all, 0.15s, linear);
+    &:hover{
+      color: darken($white, 20%);
+    }
+  }
+  ul{
+    text-align: right;
+    margin: 0.75em 0 0;
+
+  }
+  li{
+    list-style: none;
+    display: inline-block;
+  }
+
+  @media only screen and (min-width: $menu-transition){
+    display: block;
+  }
+}
+.mobile-menu-bar{
+  max-height: 0;
+  overflow: hidden;
+  display: block;
+  background-color: $medium-grey;
+
+  @include single-transition(all, 0.15s, linear);
+
+  &.is-current{
+    max-height: 10em;
+  }
+  ul{
+    margin: .5em 0 .25em;
+  }
+  li{
+    list-style: none;
+  }
+  a{
+    color: $white;
+    display: block;
+  }
+
+}
+.responsive-demonstration{
+  overflow: hidden;
+  position: relative;
+  .device-container{
+    width: 100%;
+    height: 15em;
+    overflow: hidden;
+  }
+  .device{
+    background-size: cover;
+    display: inline-block; 
+    position: absolute;
+    left: 125%;
+    right: 0;
+    margin: auto;
+    // display: none;
+    &.is-current{
+      // display: block;
+      left: 0;
+    }
+
+    &.desktop{
+      width: 22em;
+      height: 15em;
+      @include desktop-svg;
+    }
+    &.laptop{
+      width: 12em;
+      height: 10em;
+      @include laptop-svg;
+    }
+    &.tablet{
+      width: 8em;
+      height: 9em;
+      @include tablet-svg;
+    }
+    &.mobile{
+      width: 3em;
+      height: 5em;
+      @include mobile-svg;
+    }
+    &.toaster{
+      width: 12em;
+      height: 9em;
+      @include toaster-svg;
+    }
+
+    @include single-transition(all, 0.5s);
+  }
+  .movable-screen{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+    width: 2em;
+    overflow: hidden;
+      
+    width: 22em;
+    height: 15em;
+    font-size: 100%;
+
+    width: 22em;
+    height: 9.5em;
+    padding: 1em 7.5em .5em 1.25em;
+    overflow: hidden;
+    font-size: 100%;
+
+    &.laptop{
+      width: 12em;
+      height: 7.5em;
+      font-size: 80%;
+      padding: .75em .5em 0;
+
+      .ms-block-1{
+        width: 25%;
+        height: 60%;
+      }
+      .ms-block-2{
+        width: 37.5%;
+        height: 40%;
+        left: 25%;
+      }
+      .ms-block-3{
+        width: 37.5%;
+        left: 62.5%;
+        height: 40%;
+      }
+      .ms-block-4{
+        width: 75%;
+        height: 20%;
+        left:25%;
+        top: 65%;
+      }
+    }
+    &.tablet{
+      width: 14em;
+      height: 15.25em;
+      font-size: 50%;
+      padding: 1.25em .75em 0;
+
+      .ms-nav{
+        width: 100%;
+        height: 0%;
+      }
+      .ms-block-1{
+        width: 30%;
+        height: 65%;
+        top: 20%;
+      }
+      .ms-block-2{
+        width: 70%;
+        height: 20%;
+        top: 20%;
+        left: 30%;
+      }
+      .ms-block-3{
+        width: 70%;
+        height: 25%;
+        left: 30%;
+        top: 40%;
+      }
+      .ms-block-4{
+        width: 70%;
+        height: 20%;
+        left: 30%;
+        top: 65%;
+      }
+    }
+    &.mobile{
+      width: 4em;
+      height: 8.25em;
+      font-size: 50%;
+      padding: 1em .25em;
+
+      .ms-header{
+        height: 15%;
+      }
+      .ms-nav{
+        width: 100%;
+        height: 0%;
+      }
+      .ms-block-1{
+        width: 100%;
+        height: 20%;
+        top: 65%;
+      }
+      .ms-block-2{
+        width: 100%;
+        height: 15%;
+        top: 15%;
+        left: 0;
+      }
+      .ms-block-3{
+        width: 100%;
+        height: 15%;
+        top: 30%;
+        left: 0;
+      }
+      .ms-block-4{
+        width: 100%;
+        height: 20%;
+        top: 45%;
+        left: 0;
+      }
+    }
+    &.toaster{
+      width: 10em;
+      height: 11em;
+      font-size: 70%;
+      padding: 5em 1em 0 .5em;
+
+
+      .ms-nav{
+        width: 100%;
+        height: 0%;
+      }
+      .ms-block-1{
+        width: 25%;
+        height: 55%;
+        top: 20%;
+      }
+      .ms-block-2{
+        width: 37.5%;
+        height: 40%;
+        left: 25%;
+        top: 20%;
+      }
+      .ms-block-3{
+        width: 37.5%;
+        left: 62.5%;
+        height: 40%;
+        top: 20%;
+      }
+      .ms-block-4{
+        width: 75%;
+        height: 15%;
+        left:25%;
+        top: 60%;
+      }
+      .ms-block-5{
+        top: 75%;
+      }
+    }
+
+    .ms-container{
+      position: relative;
+      display: block;
+      height:100%;
+    }
+
+    .ms-object{
+      position: absolute;
+      display: block; 
+      text-indent: -999em;
+      overflow: hidden;
+      border: 1px solid $brown;
+      border-radius: 2px;
+      @include single-transition(all, 0.5s);
+    }
+
+    .ms-header{
+      width: 100%;
+      height: 20%;
+      background-color: darken($blue, 22%);
+    }
+    .ms-nav{
+      width: 100%;
+      height: 5%;
+      top: 20%;
+      background-color: darken($blue, 20%);
+    }
+    .ms-block-1{
+      width: 20%;
+      height: 60%;
+      top: 25%;
+      background-color: darken($blue, 18%);
+    }
+    .ms-block-2{
+      width: 26.6%;
+      height: 60%;
+      top: 25%;
+      left: 20%;
+      background-color: darken($blue, 16%);
+    }
+    .ms-block-3{
+      width: 26.6%;
+      height: 60%;
+      top: 25%;
+      left: 46.6%;
+      background-color: darken($blue, 14%);
+    }
+    .ms-block-4{
+      width: 26.6%;
+      height: 60%;
+      top: 25%;
+      left: 73.2%;
+      background-color: darken($blue, 12%);
+    }
+    .ms-block-5{
+      width: 100%;
+      height: 15%;
+      top: 85%;
+      background-color: $blue;
+    }
+
+
+    @include single-transition(all, 0.5s);
+
+  }
+}
+.home-section{
+  margin: 4em 0;
+}
+
+.portfolio-thumb{
+  margin: 0 0 2em;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  padding: 1em;
+
+  //Mixins
+  @include subtle-glow();
+  .details{
+    
+    width: 100%;
+    height: 14em;
+
+
+    @media #{$small}{
+      .no-touch & {
+        padding: 1em;
+        background-color: $medium-grey;
+        background-color: fade-out($dark-grey, .1);
+
+        color: $white;
+        h1, h2, h3, h4, h5, h6, h6, h7{
+          color: $white;
+        }
+        left: 100%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+      }
+    } 
+
+    //Mixins
+    @include single-transition(all, 0.25s);
+  }
+  @media #{$small}{
+    .no-touch &:hover{
+      .details{
+        left: 0;
+      }
+    }
+  
+  }
+  .img-container{
+    position: relative;
+    display: block;
+    padding: 100% 0 0;
+  }
+  img{
+    display: block;
+    width:100%;
+    position: absolute;
+    height: auto;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+  }
+
+}
+.input-label{
+  display: block;
+  margin-bottom: 1.25em;
+  &.error{
+    input,
+    textarea{
+      border-color: lighten($red, 30%);
+
+    }
+  }
+  input,
+  textarea{
+    margin: 0;
+    display: block;
+    width: 100%;
+    border: .1875em solid lighten($medium-grey, 50%);
+    padding: .5em;
+    font-size: 0.875em;
+    border-radius: .25em;
+    &:focus{
+      border-color: $blue;
+      outline: none;
+    }
+  }
+}
+.error-message{
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  height: 0;
+  padding: 0;
+  background-color: lighten($red, 50%);
+  
+  @include single-transition(all, 0.25s, linear);
+
+  .error &{
+    height: auto;
+    max-height: 3em;
+    padding: .5em;
+  }
+}
+.form-submit{
+  background-color: darken($blue, 15%);
+  color: #fff;
+  font-size: 1.5em;
+  border: 0;
+  padding: .5em 1em;
+  border-radius: .125em;
+  cursor: pointer;
+  display: inline-block;
+  text-shadow: 0 .0625em .0625em $medium-grey;
+
+  @include single-transition(all, 0.15s, linear);
+  &:hover,
+  &:focus,
+  &:active{
+    color: $white;
+    background-color: darken($blue, 17%);
+  }
+  @include subtle-glow();
+}
+.updateability{
+  display: block;
+  position: relative;
+  width: 100%;
+  //height: 15.625em;
+  padding-top: 83%;
+  background-size: cover;
+  overflow: hidden;
+  @include devices-svg();
+  .updateable-device {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    img{
+      // display: none;
+      opacity: 0;
+      position: absolute;
+      left: 31%;
+      top: 12%;
+      width: 30%;
+      height: auto;
+      &.moustache{
+        margin-top: 15%;
+      }
+
+      @include single-transition(all, 0.5s, ease-in-out);
+      &.mobile{
+        left: 2.25%;
+        top: 27%;
+        width: 4%;
+        opacity: 1;
+        margin-top: 0;
+        &.moustache{
+          margin-top: 2%;
+        }
+      }
+      &.desktop{
+        left: 9%;
+        top: 63.5%;
+        opacity: 1;
+        width: 17%;
+        &.moustache{
+          margin-top: 6%;
+        }
+      }
+      &.laptop{
+        left: 81.5%;
+        top: 27.25%;
+        font-size: .75;
+        opacity: 1;
+        width: 11%;
+        &.moustache{
+          margin-top: 4.5%;
+        }
+      }
+      &.tablet{
+        left: 82%;
+        top: 74.5%;
+        font-size: .5;
+        opacity: 1;
+        width: 10%;
+        &.moustache{
+          margin-top: 5%;
+        }
+      }
+      
+    }
+    &.is-current{
+      opacity: 1;
+      img:first-child{
+        opacity: 1;
+      }
+    }
+  }
+}
+.side-panel{
+  padding: 1em;
+  @include block-glow(fade-out(darken($blue, 10%), .75));
+  background-color: lighten($blue, 32%);
+}
+
+.about-image{
+  background-position: 1% bottom;
+  background-repeat: no-repeat;
+  @include kason-src();
+}
+.about-text{
+  background-color: fade-out(lighten($white, 5%), .25);
+  margin-bottom: 2em;
+}
+.footer{
+  height:.55em;
+  overflow: hidden;
+  font-size: 4em;
+  display: block;
+  padding: 0;
+  text-align: center
+}

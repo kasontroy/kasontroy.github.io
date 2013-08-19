@@ -1,0 +1,37 @@
+---
+layout: interior
+---
+
+{{ content }}
+<h3>Send me a message:</h3>
+<div class="row">
+  <form class="medium-8 large-6 columns" action="http://getsimpleform.com/messages?form_api_token=c2e189155eeba3c08fb501158bdd0fce" method="post" data-abide>
+    <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+    <input type='hidden' name='redirect_to' value='http://direction.l/contact/thanks' />
+    <!-- all your input fields here.... -->
+    <label class="input-label">Name
+    	<input type='text' placeholder="Howdy. What should I call you?" required required pattern="[a-zA-Z]+"/>
+    	<div class="error-message" data-error-message>Please enter your name.</div>
+    </label>
+    <label class="input-label">Email Address
+  	<input type='email' name='email' placeholder="I won't spam you. Promise." required/>
+    <div class="error-message" data-error-message>Please enter your email address.</div>
+
+    </label>
+    <label class="input-label">Website (not required)
+    	<input type='text' name="website" placeholder="ex: www.yourawesomesite.com">
+    </label>
+    <label class="input-label">Message
+  	  <textarea rows="4" name='message' placeholder="How can I help?" required></textarea>
+    	<div class="error-message" data-error-message>Please enter your message.</div>
+
+  	</label>
+    <button class="form-submit right" type='submit'>Send</button>
+  </form>
+  <aside class="medium-4 columns">
+    <div class="side-panel">
+      <h5>If I can't help you, I'd be happy to point you in the right direction.</h5>
+      <p>You can also call me at:<br> (432) 201-9688</p>
+    </div>
+  </aside>
+</div>
