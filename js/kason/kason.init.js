@@ -31,11 +31,11 @@
         }
     }
     function setUpdateableDevices(){
-        $(this).find('img').clone().appendTo(this).clone().appendTo(this).clone().appendTo(this).clone().appendTo(this);
+        $(this).find('.updateable-content').clone().appendTo(this).clone().appendTo(this).clone().appendTo(this).clone().appendTo(this);
     }
     function updateUpdateability(){
         var current = updateability.find('.is-current'),
-            $currentImgs = current.find('img');
+            $currentImgs = current.find('.updateable-content');
 
         $currentImgs.eq(1).addClass('mobile');
         $currentImgs.eq(2).addClass('tablet');
@@ -52,7 +52,7 @@
             nextActive = updateability.find('.updateable-device').eq(0);
         }
 
-        current.removeClass('is-current').find('img').removeClass('mobile tablet laptop desktop');
+        current.removeClass('is-current').find('.updateable-content').removeClass('mobile tablet laptop desktop');
         nextActive.addClass('is-current');
     }
     function setNextResponsive(){

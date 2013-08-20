@@ -1,0 +1,6 @@
+---
+layout: none
+permalink: .htaccess
+---
+
+AddType text/x-component .htc
