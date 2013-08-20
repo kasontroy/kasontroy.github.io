@@ -1,6 +1,7 @@
 ---
 layout: about
 pageTitle: About
+title: I do use HTML5, CSS3/Less/Sass and PHP to build stuff. I also like cooking.
 ---
 
 ##Hi, I'm Kason
