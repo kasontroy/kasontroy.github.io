@@ -1695,28 +1695,28 @@ body {
     .responsive-demonstration .device.laptop {
       width: 12em;
       height: 10em;
-      margin-top: 2.5em;
+      margin-top: 7%;
       background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjQ2LjY2N3B4IiBoZWlnaHQ9IjIwNy44MzNweCIgdmlld0JveD0iMCAwIDI0Ni42NjcgMjA3LjgzMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQ2LjY2NyAyMDcuODMzIg0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiM1OTU5NTkiIHN0cm9rZT0iIzU5NTk1OSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik0yNDIuMzYzLDE5MS41OTdjMCw2LjYyNy01LjM3MywxMi0xMiwxMkgxNS42MzcNCgkJYy02LjYyNywwLTEyLTUuMzczLTEyLTEybDIwLTUyLjI0OGMwLTYuNjI3LDUuMzczLTEyLDEyLTEyaDE3NC43MjZjNi42MjcsMCwxMiw1LjM3MywxMiwxMkwyNDIuMzYzLDE5MS41OTd6Ii8+DQoJPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk1OTU5IiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgZD0iTTIyMi4zNjMsMTE0LjkzYzAsNi42MjctNS4zNzMsMTItMTIsMTJIMzUuNjM3DQoJCWMtNi42MjcsMC0xMi01LjM3My0xMi0xMlYxNS42ODJjMC02LjYyNyw1LjM3My0xMiwxMi0xMmgxNzQuNzI2YzYuNjI3LDAsMTIsNS4zNzMsMTIsMTJWMTE0LjkzeiIvPg0KPC9nPg0KPC9zdmc+DQo="); }
       .no-svg .responsive-demonstration .device.laptop {
         background-image: url("/images/laptop.png"); }
     .responsive-demonstration .device.tablet {
       width: 8em;
       height: 9em;
-      margin-top: 3em;
+      margin-top: 8%;
       background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTQyLjE2N3B4IiBoZWlnaHQ9IjE1OC4wNDJweCIgdmlld0JveD0iMCAwIDE0Mi4xNjcgMTU4LjA0MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTQyLjE2NyAxNTguMDQyIg0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzU5NTk1OSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik0xMzguNjEzLDE0Mi43ODJjMCw2LjYyNy01LjM3MywxMi0xMiwxMkgxNS4zNTUNCgljLTYuNjI3LDAtMTItNS4zNzMtMTItMTJWMTUuMjljMC02LjYyNyw1LjM3My0xMiwxMi0xMmgxMTEuMjU4YzYuNjI3LDAsMTIsNS4zNzMsMTIsMTJWMTQyLjc4MnoiLz4NCjwvc3ZnPg0K"); }
       .no-svg .responsive-demonstration .device.tablet {
         background-image: url("/images/tablet.png"); }
     .responsive-demonstration .device.mobile {
       width: 3em;
       height: 5em;
-      margin-top: 4em;
+      margin-top: 14%;
       background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNThweCIgaGVpZ2h0PSI5Ni41cHgiIHZpZXdCb3g9IjAgMCA1OCA5Ni41IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1OCA5Ni41IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzU5NTk1OSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik01NC42OTgsODEuMTgxYzAsNi42MjctNS4zNzMsMTItMTIsMTJIMTUuMjY0DQoJYy02LjYyNywwLTEyLTUuMzczLTEyLTEyVjE1LjE4NmMwLTYuNjI3LDUuMzczLTEyLDEyLTEyaDI3LjQzNWM2LjYyNywwLDEyLDUuMzczLDEyLDEyVjgxLjE4MXoiLz4NCjwvc3ZnPg0K"); }
       .no-svg .responsive-demonstration .device.mobile {
         background-image: url("/images/mobile.png"); }
     .responsive-demonstration .device.toaster {
       width: 12em;
       height: 9em;
-      margin-top: 3em;
+      margin-top: 8%;
       background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjY4cHgiIGhlaWdodD0iMjAwLjVweCIgdmlld0JveD0iMCAwIDI2OCAyMDAuNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjY4IDIwMC41IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGMkVCQzIiIHN0cm9rZT0iI0NFQjg1QiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik0xODcsNTQuNWMwLDYuNjI3LTUuMzczLDEyLTEyLDEySDg0DQoJCWMtNi42MjcsMC0xMi01LjM3My0xMi0xMmMwLDAsMC0xNi41LDAtMjFzNC0zLjUsNC03Ljc1cy00LTMuMjUtNC03LjVTNzIsMTQsNzIsMTRjMC02LjYyNyw1LjM3My0xMiwxMi0xMmg5MQ0KCQljNi42MjcsMCwxMiw1LjM3MywxMiwxMmMwLDAsMCwwLjI1LDAsNC4yNWMwLDUuMjUtNCwyLjc1LTQsNy41czQsNCw0LDcuNzVTMTg3LDU0LjUsMTg3LDU0LjV6Ii8+DQoJPHBhdGggZmlsbD0iIzM4MzgzOCIgZD0iTTIzNiw5OC43NWMwLDQuMjgsMy40Nyw3Ljc1LDcuNzUsNy43NWgxNi41YzQuMjgsMCw3Ljc1LTMuNDcsNy43NS03Ljc1bDAsMGMwLTQuMjgtMy40Ny03Ljc1LTcuNzUtNy43NQ0KCQloLTE2LjVDMjM5LjQ3LDkxLDIzNiw5NC40NywyMzYsOTguNzVMMjM2LDk4Ljc1eiIvPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjNTk1OTU5IiBkPSJNMjAyLDM1LjVINTJjLTYuNjI3LDAtNTIsNC41LTUyLDUyczAsMTAxLDAsMTAxYzAsNi42MjcsNS4zNzMsMTIsMTIsMTJoMjMwYzYuNjI3LDAsMTItNS4zNzMsMTItMTJ2LTEwMQ0KCQkJQzI1NCwzNS41LDIwOC42MjcsMzUuNSwyMDIsMzUuNXogTTIwMSwxNjAuNWMwLDYuNjI3LTUuMzczLDEyLTEyLDEySDY4Yy02LjYyNywwLTEyLTUuMzczLTEyLTEydi03OGMwLTYuNjI3LDUuMzczLTEyLDEyLTEyaDEyMQ0KCQkJYzYuNjI3LDAsMTIsNS4zNzMsMTIsMTJWMTYwLjV6Ii8+DQoJCTxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0xODksNzAuNUg2OGMtNi42MjcsMC0xMiw1LjM3My0xMiwxMnY3OGMwLDYuNjI3LDUuMzczLDEyLDEyLDEyaDEyMWM2LjYyNywwLDEyLTUuMzczLDEyLTEydi03OA0KCQkJQzIwMSw3NS44NzMsMTk1LjYyNyw3MC41LDE4OSw3MC41eiIvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K"); }
       .no-svg .responsive-demonstration .device.toaster {
         background-image: url("/images/toaster.png"); }
@@ -1727,10 +1727,6 @@ body {
     right: 0;
     margin: auto;
     display: block;
-    width: 2em;
-    overflow: hidden;
-    width: 22em;
-    height: 15em;
     font-size: 100%;
     width: 22em;
     height: 9.5em;
@@ -1742,10 +1738,10 @@ body {
     transition: all 0.5s ease-out; }
     .responsive-demonstration .movable-screen.laptop {
       width: 12em;
-      height: 7.5em;
+      height: 7.25em;
       font-size: 80%;
       padding: .75em .5em 0;
-      margin-top: 2.9em; }
+      margin-top: 7%; }
       .responsive-demonstration .movable-screen.laptop .ms-block-1 {
         width: 25%;
         height: 60%; }
@@ -1763,11 +1759,11 @@ body {
         left: 25%;
         top: 65%; }
     .responsive-demonstration .movable-screen.tablet {
-      width: 14em;
-      height: 15.25em;
+      width: 20%;
+      height: 56%;
       font-size: 50%;
-      padding: 1.25em .75em 0;
-      margin-top: 5em; }
+      margin-top: 8%;
+      padding: 1.75% 0 0; }
       .responsive-demonstration .movable-screen.tablet .ms-nav {
         width: 100%;
         height: 0%; }
@@ -1791,11 +1787,11 @@ body {
         left: 30%;
         top: 65%; }
     .responsive-demonstration .movable-screen.mobile {
-      width: 5em;
-      height: 8.25em;
+      width: 6%;
+      height: 28%;
       font-size: 50%;
-      padding: 1em .25em;
-      margin-top: 7.5em; }
+      margin-top: 14%;
+      padding: 2% 0 0; }
       .responsive-demonstration .movable-screen.mobile .ms-header {
         height: 15%; }
       .responsive-demonstration .movable-screen.mobile .ms-nav {
@@ -1825,7 +1821,7 @@ body {
       height: 11em;
       font-size: 70%;
       padding: 5em 1em 0 .25em;
-      margin-top: 4.325em; }
+      margin-top: 8%; }
       .responsive-demonstration .movable-screen.toaster .ms-nav {
         width: 100%;
         height: 0%; }
@@ -2018,58 +2014,58 @@ body {
     -ms-behavior: url("/stylesheets/backgroundsize.min.htc");
     background-image: url("/images/devices.png"); }
   .updateability .updateable-device {
-    width: 100%;
-    height: 100%;
     opacity: 0;
     display: none; }
-    .no-svg .updateability .updateable-device image {
-      width: 100%; }
     .updateability .updateable-device .updateable-content {
       opacity: 0;
       position: absolute;
-      left: 31%;
-      top: 12%;
-      width: 30%;
-      height: auto;
+      left: 28%;
+      top: 11%;
+      width: 60%;
+      height: 60%;
       -webkit-transition: all 0.5s ease-in-out;
       -moz-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
       .updateability .updateable-device .updateable-content.moustache {
-        margin-top: 15%; }
+        margin-top: 5%; }
+      .updateability .updateable-device .updateable-content .updateable-content-svg {
+        height: inherit;
+        width: inherit; }
       .updateability .updateable-device .updateable-content.mobile {
-        left: 2.25%;
+        left: 1.75%;
         top: 27%;
-        width: 4%;
         opacity: 1;
-        margin-top: 0; }
+        margin-top: 0;
+        width: 22%;
+        height: 22%; }
         .updateability .updateable-device .updateable-content.mobile.moustache {
           margin-top: 2%; }
       .updateability .updateable-device .updateable-content.desktop {
-        left: 9%;
+        left: 7.5%;
         top: 63.5%;
         opacity: 1;
-        width: 17%; }
+        width: 45%;
+        height: 45%; }
         .updateability .updateable-device .updateable-content.desktop.moustache {
           margin-top: 6%; }
       .updateability .updateable-device .updateable-content.laptop {
-        left: 81.5%;
+        left: 80.5%;
         top: 27.25%;
         font-size: .75;
         opacity: 1;
-        width: 11%; }
+        width: 35%;
+        height: 35%; }
         .updateability .updateable-device .updateable-content.laptop.moustache {
           margin-top: 4.5%; }
       .updateability .updateable-device .updateable-content.tablet {
-        left: 82%;
+        left: 81.25%;
         top: 74.5%;
         font-size: .5;
         opacity: 1;
-        width: 10%; }
+        width: 34%;
+        height: 34%; }
         .updateability .updateable-device .updateable-content.tablet.moustache {
           margin-top: 5%; }
-      .updateability .updateable-device .updateable-content .updateable-content-svg {
-        width: 100%;
-        height: 50%; }
     .updateability .updateable-device.is-current {
       display: block;
       opacity: 1; }
