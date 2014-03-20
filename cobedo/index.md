@@ -11,4 +11,4 @@ It's cool. You don't have to know what most of that means.
 
 While my toolbox can be technical, my strength is working with people. I work with designers and developers to build what you need.
 
-Check out my [portfolio](/contact) to see what I've been working on lately.
+Check out my [portfolio](/portfolio) to see what I've been working on lately.
