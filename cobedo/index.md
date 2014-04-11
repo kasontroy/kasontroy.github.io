@@ -13,4 +13,3 @@ While my toolbox can be technical, my strength is working with people. I work wi
 
 Check out my [portfolio](/portfolio) to see what I've been working on lately.
 
-<p>Testing HTML</p>
