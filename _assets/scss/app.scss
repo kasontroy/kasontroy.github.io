@@ -62,7 +62,7 @@
 //Custom Variables
 $menu-transition: 45em;
 
-$small-medium: 33em;
+$small-medium: 640px;
 @media only screen and (min-width: $small-medium){
   @for $i from 1 through $total-columns {
     .small-medium#{-$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
@@ -111,8 +111,11 @@ ul{
 }
 
   // }
-
+html{
+  height: 100%;
+}
 body{
+  min-height: 100%;
   background-color: $white;
   @if $experimental {
     background: -moz-linear-gradient(left,$white 0%, darken($white, 1%) 100%);
@@ -120,6 +123,9 @@ body{
   }
   background: linear-gradient(to right, $white 0%, darken($white, 1%) 100%);
 
+}
+.relative{
+  position:relative;
 }
 
 .brown-panel { 
@@ -568,7 +574,11 @@ body{
   .details{
     
     width: 100%;
-    height: 14em;
+
+
+    @media only screen and (min-width: $small-medium){
+      height: 14em;
+    }
 
 
     @media #{$small}{
@@ -599,19 +609,28 @@ body{
     }
   
   }
-  .img-container{
-    position: relative;
-    display: block;
-    padding: 100% 0 0;
-  }
+
   img{
     display: block;
-    width:100%;
-    position: absolute;
+    max-width: 100%;
     height: auto;
-    margin: auto;
-    top: 0;
-    bottom: 0;
+    margin: 0 auto 1rem;
+  }
+
+  @media only screen and (min-width: $small-medium){
+    .img-container{
+      position: relative;
+      display: block;
+      padding: 100% 0 0;
+    }
+    img{
+      width:100%;
+      position: absolute;
+      height: auto;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+    }
   }
 
 }
@@ -803,5 +822,8 @@ body{
   font-size: 4em;
   display: block;
   padding: 0;
-  text-align: center
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
