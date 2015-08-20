@@ -1,3 +1,5 @@
+---
+---
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
@@ -128,21 +130,71 @@ body{
   position:relative;
 }
 
-.brown-panel { 
+.blue-panel {
   overflow: hidden;
-  @include panel($brown, 1.25em 0);
-  
+  color: #333;
+  @include panel($lighter-blue, 1.25em 0);
+
   @media only screen and (min-width: $menu-transition){
-    @include panel($brown, 2.5em 0);
+    @include panel($lighter-blue, 2.5em 0);
+  }
+}
+
+.white-panel {
+  overflow: hidden;
+  color: #000;
+  @include panel($white, 1.25em 0);
+
+  @media only screen and (min-width: $menu-transition){
+    @include panel($white, 2.5em 0);
+  }
+}
+
+.grey-panel {
+  overflow: hidden;
+  color: #fff;
+  @include panel($medium-grey, 1.25em 0);
+
+  @media only screen and (min-width: $menu-transition){
+    @include panel($medium-grey, 2.5em 0);
+  }
+}
+
+.light-grey-panel {
+  overflow: hidden;
+  color: #fff;
+  @include panel(lighten($medium-grey,10%), 1.25em 0);
+
+  @media only screen and (min-width: $menu-transition){
+    @include panel(lighten($medium-grey,10%), 2.5em 0);
+  }
+}
+
+.panel-body{
+  padding: 1em 1em 0;
+
+  @media only screen and (min-width: $menu-transition){
+    padding: 1.5em 1.5em 0;
+
+    .columns:first-child &{
+      margin-left: -1.5em;
+    }
+    .columns:last-child &{
+      margin-right: -1.5em;
+    }
   }
 }
 
 .content-area{
-  margin:4em 0;
+  margin: 2.5em 0;
   background-color: lighten($white, 5%);
+  border-top: .5em solid $dark-blue;
 
   //Mixins
-  @include block-glow();
+  // @include block-glow();
+  @media only screen and (min-width: $menu-transition){
+    margin-top: 4em;
+  }
 }
 .interior-content{
   padding-top: 1.25em;
@@ -152,19 +204,24 @@ body{
 .logo{
   vertical-align: middle;
   display: inline-block;
+  fill: #fff;
   width: 2em;
   height: 2em;
   @media only screen and (min-width: $menu-transition){
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2.5em;
+    margin-top: .5em;
   }
 }
 .header{
+  position:fixed;
   background-color: $dark-grey;
   color: $white;
   padding-top: .25em;
   padding-bottom: .25em;
-  border-bottom: .5em solid $orange;
+  width: 100%;
+  z-index: 100;
+
   .logo-text{
     display: inline-block;
     font-size: 1.25em;
@@ -274,7 +331,7 @@ body{
   }
   .device{
     background-size: cover;
-    display: inline-block; 
+    display: inline-block;
     position: absolute;
     left: 200%;
     right: 0;
@@ -499,7 +556,7 @@ body{
 
     .ms-object{
       position: absolute;
-      display: block; 
+      display: block;
       text-indent: -999em;
       overflow: hidden;
       border: 1px solid $brown;
@@ -569,10 +626,16 @@ body{
   background-color: white;
   padding: 1em;
 
+  &.skinny{
+    @media only screen and (min-width: $menu-transition){
+      padding: 0;
+    }
+  }
+
   //Mixins
   @include subtle-glow();
   .details{
-    
+
     width: 100%;
 
 
@@ -596,7 +659,7 @@ body{
         top: 0;
         position: absolute;
       }
-    } 
+    }
 
     //Mixins
     @include single-transition(all, 0.25s);
@@ -607,7 +670,7 @@ body{
         left: 0;
       }
     }
-  
+
   }
 
   img{
@@ -666,7 +729,7 @@ body{
   height: 0;
   padding: 0;
   background-color: lighten($red, 50%);
-  
+
   @include single-transition(all, 0.25s, linear);
 
   .error &{
@@ -675,25 +738,26 @@ body{
     padding: .5em;
   }
 }
-.form-submit{
-  background-color: darken($blue, 15%);
-  color: #fff;
+.button,
+button{
   font-size: 1.5em;
   border: 0;
   padding: .5em 1em;
-  border-radius: .125em;
   cursor: pointer;
   display: inline-block;
-  text-shadow: 0 .0625em .0625em $medium-grey;
 
   @include single-transition(all, 0.15s, linear);
-  &:hover,
-  &:focus,
-  &:active{
-    color: $white;
-    background-color: darken($blue, 17%);
-  }
-  @include subtle-glow();
+  // @include subtle-glow();
+}
+.form-submit{
+    background-color: $green;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active{
+      color: $white;
+      background-color: darken($green, 17%);
+    }
 }
 .updateability{
   display: block;
@@ -813,6 +877,12 @@ body{
   background-color: fade-out(lighten($white, 5%), .25);
   margin-bottom: 2em;
 }
+.more-list{
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  margin-left: 0;
+  list-style: none;
+}
 .nothing-to-see{
   color: lighten($medium-grey, 50%);
 }
@@ -826,4 +896,8 @@ body{
   position: absolute;
   bottom: -1em;
   width: 100%;
+}
+
+.mtl{
+  margin-top: 2em;
 }
