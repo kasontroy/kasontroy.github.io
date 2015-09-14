@@ -75,6 +75,7 @@
         mobileMenuInit();
         homeResponsiveDemonstrationInit();
         updateabilityInit();
+        console.log("You should probably just email me at kason@kason.es already :p");
     }
 
 
