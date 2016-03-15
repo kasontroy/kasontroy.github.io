@@ -976,8 +976,24 @@ button{
   width: 100%;
 }
 
-#contact-form .input-label:first-child{
+.contact-form .input-label:first-child{
   display: none;
+}
+
+.contact-form.submitted .input-label,
+.contact-form.submitted .form-submit{
+  opacity: .1;
+}
+.contact-form .thankyou{
+  float: left;
+  font-size: 1.25em;
+  transition: all .5s;
+  margin: .75em 0 0;
+  opacity: 0;
+  display: block;
+}
+.contact-form.submitted .thankyou{
+  opacity: 1;
 }
 
 .mtl{
