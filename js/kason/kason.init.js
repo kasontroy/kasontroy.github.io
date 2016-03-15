@@ -71,25 +71,35 @@
 
     }
 
-    function contactInit(){
-      var $form = $('#contact-form');
-
-      $form.submit(function(e){
-        var data = $form.serializeArray();
-
-        if(data[0].value === ''){
-          $.ajax({
-            dataType: 'jsonp',
-            url: "http://getsimpleform.com/messages/ajax?form_api_token=c2e189155eeba3c08fb501158bdd0fce",
-            data: $form.serialize()
-          }).done(function(){
-            console.log('boom');
-          });
-        }
-
-        e.preventDefault();
       });
     }
+
+    function contactInit(){
+      var $form = $('#contact-form'),
+        $thankyou = $('#contact-form #thankyou'),
+        tk = "d08ba1883e084b39a46121546accac87",
+        submitFunc = function(e){
+          // e.stopPropagation();
+          var data = $form.serializeArray();
+          if(e.type === 'valid' && data[0].value === ''){
+            $.ajax({
+              dataType: 'jsonp',
+              url: "http://getsimpleform.com/messages/ajax?form_api_token=" + tk,
+              data: $form.serialize()
+            }).done(doneFunc);
+          }
+
+          e.preventDefault();
+        },
+        doneFunc = function(e){
+          $form.find("input, select, textarea, button").prop("disabled",true);
+
+          $form.addClass('submitted');
+        };
+
+      $form.on('valid submit',submitFunc);
+    }
+
     function init() {
         mobileMenuInit();
         homeResponsiveDemonstrationInit();

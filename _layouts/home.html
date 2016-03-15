@@ -254,8 +254,7 @@ layout: default
 		<div class="columns">
 			<h2>Contact</h2>
 		</div>
-	  <form id="contact-form" class="medium-8 large-6 columns contact-form" >
-	  <!-- <form class="medium-8 large-6 columns contact-form" action="http://getsimpleform.com/messages?form_api_token=c2e189155eeba3c08fb501158bdd0fce" method="post" data-abide> -->
+	  <form id="contact-form" class="medium-8 large-6 columns contact-form" data-abide>
 	    <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
 	    <!-- <input type='hidden' name='redirect_to' value='http://kason.es/contact/thanks' /> -->
 	    <!-- all your input fields here.... -->
@@ -277,6 +276,7 @@ layout: default
 	  	  <textarea rows="4" name='message' required></textarea>
 	    	<div class="error-message" data-error-message>Please enter your message.</div>
 	  	</label>
+			<p id="thankyou" class="thankyou">Thank you. I'll be in contact soon.</p>
 	    <button class="form-submit right" type='submit'>Send</button>
 	  </form>
 	</div>

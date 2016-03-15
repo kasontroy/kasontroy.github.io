@@ -3,3 +3,5 @@ permalink: .htaccess
 ---
 
 AddType text/x-component .htc
+
+ErrorDocument 404 /
