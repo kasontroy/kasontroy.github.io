@@ -254,33 +254,30 @@ layout: default
 		<div class="columns">
 			<h2>Contact</h2>
 		</div>
-	  <form class="medium-8 large-6 columns contact-form" action="http://getsimpleform.com/messages?form_api_token=c2e189155eeba3c08fb501158bdd0fce" method="post" data-abide>
+	  <form id="contact-form" class="medium-8 large-6 columns contact-form" >
+	  <!-- <form class="medium-8 large-6 columns contact-form" action="http://getsimpleform.com/messages?form_api_token=c2e189155eeba3c08fb501158bdd0fce" method="post" data-abide> -->
 	    <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-	    <input type='hidden' name='redirect_to' value='http://kason.es/contact/thanks' />
+	    <!-- <input type='hidden' name='redirect_to' value='http://kason.es/contact/thanks' /> -->
 	    <!-- all your input fields here.... -->
+	    <label class="input-label">Contact
+	    	<input type='text' name='contact'/>
+	    </label>
 	    <label class="input-label">Name
-	    	<input type='text' placeholder="Howdy. What should I call you?" required required pattern="[a-zA-Z]+"/>
+	    	<input type='text' name='name' required pattern="[a-zA-Z]+"/>
 	    	<div class="error-message" data-error-message>Please enter your name.</div>
 	    </label>
 	    <label class="input-label">Email Address
-	  	<input type='email' name='email' placeholder="I won't spam you. Promise." required/>
-	    <div class="error-message" data-error-message>Please enter your email address.</div>
-
+		  	<input type='email' name='email' required/>
+		    <div class="error-message" data-error-message>Please enter your email address.</div>
 	    </label>
 	    <label class="input-label">Website (not required)
 	    	<input type='text' name="website">
 	    </label>
 	    <label class="input-label">Message
-	  	  <textarea rows="4" name='message' placeholder="How can I help?" required></textarea>
+	  	  <textarea rows="4" name='message' required></textarea>
 	    	<div class="error-message" data-error-message>Please enter your message.</div>
-
 	  	</label>
 	    <button class="form-submit right" type='submit'>Send</button>
 	  </form>
-	  <!-- <aside class="medium-4 columns">
-	    <div class="side-panel">
-	      <p>You can also call me at:<br> (432) 201-9688</p>
-	    </div>
-	  </aside> -->
 	</div>
 </div>

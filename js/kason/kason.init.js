@@ -71,10 +71,30 @@
 
     }
 
+    function contactInit(){
+      var $form = $('#contact-form');
+
+      $form.submit(function(e){
+        var data = $form.serializeArray();
+
+        if(data[0].value === ''){
+          $.ajax({
+            dataType: 'jsonp',
+            url: "http://getsimpleform.com/messages/ajax?form_api_token=c2e189155eeba3c08fb501158bdd0fce",
+            data: $form.serialize()
+          }).done(function(){
+            console.log('boom');
+          });
+        }
+
+        e.preventDefault();
+      });
+    }
     function init() {
         mobileMenuInit();
         homeResponsiveDemonstrationInit();
         updateabilityInit();
+        contactInit();
         console.log("You should probably just email me at kason@kason.es already :p");
     }
 
