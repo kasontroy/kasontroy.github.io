@@ -71,9 +71,6 @@
 
     }
 
-      });
-    }
-
     function contactInit(){
       var $form = $('#contact-form'),
         $thankyou = $('#contact-form #thankyou'),
