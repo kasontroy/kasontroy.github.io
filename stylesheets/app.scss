@@ -707,9 +707,7 @@ body{
   @include subtle-glow();
   .details{
     width: 100%;
-    @media only screen and (max-width: $large-screen){
-      margin-top: 1.5em;
-    }
+    margin-top: 1.5em;
 
     @media only screen and (min-width: $small-medium){
       height: 16em;
@@ -718,6 +716,7 @@ body{
 
     @media #{$small}{
       .no-touch & {
+        margin-top: 0;
         padding: 1em;
         background-color: $medium-grey;
         background-color: fade-out($dark-grey, .1);
