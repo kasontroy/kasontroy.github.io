@@ -2,13 +2,18 @@
 
     "use strict";
 
-
-        // Tabbed Widget
+    // Tabbed Widget
     var mobileMenuButton     =   $("#mobile-menu-button"),
         responsiveDemonstration =   $("#responsive-demonstration"),
-        updateability =   $("#updateability");
+        updateability =   $("#updateability"),
+        seeMoreLink = $("#see-more");
 
 
+    /*-----------See More Link------------*/
+
+    function seeMoreInit(){
+        seeMoreLink.kason_display();
+    }
     /*-----------Mobile Menu------------*/
 
     function mobileMenuInit(){
@@ -100,8 +105,9 @@
     function init() {
         mobileMenuInit();
         homeResponsiveDemonstrationInit();
-        updateabilityInit();
+        // updateabilityInit();
         contactInit();
+        seeMoreInit();
         console.log("You should probably just email me at kason@kason.es already :p");
     }
 

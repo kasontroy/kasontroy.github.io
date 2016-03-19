@@ -55,10 +55,11 @@
   "data";
 
 //Fonts
-@include set-font("Source Sans Pro","source-sans-pro/SourceSansPro-Regular");
-@include set-font("Kameron","kameron/kameron-regular");
-@include set-font("Museo Slab","museo/museo-slab-500");
-@include set-font("Museo Sans","museo/museo-sans-500");
+@include set-font("Source Sans Pro","source-sans-pro/SourceSansPro-Regular","normal",500);
+@include set-font("Source Sans Pro","source-sans-pro/SourceSansPro-Bold","normal",800);
+@include set-font("Kameron","kameron/kameron-regular","normal",500);
+@include set-font("Museo Slab","museo/museo-slab-500","normal",500);
+@include set-font("Museo Sans","museo/museo-sans-500","normal",500);
 
 
 //Custom Variables
@@ -162,6 +163,7 @@ body{
 }
 
 .grey-panel {
+  position: relative;
   overflow: hidden;
   color: #fff;
   @include panel($medium-grey, 1.25em 0);
@@ -169,7 +171,24 @@ body{
   @media only screen and (min-width: $menu-transition){
     @include panel($medium-grey, 2.5em 0);
   }
+  p{
+    font-size: 1.125em;
+  }
 
+  // &:after{
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   display: block;
+  //   width: 100%;
+  //   height: 20em;
+  //   background-image: url("/images/brain.svg");
+  //   background-repeat: no-repeat;
+  //   background-position: top center;
+  //   background-size: auto 200%;
+  //   opacity: .05;
+  //
+  // }
 }
 
 .light-grey-panel {
@@ -422,6 +441,7 @@ body{
     margin: auto;
     display: block;
     font-size: 100%;
+    box-sizing: border-box;
 
     width: 22em;
     height: 9.5em;
@@ -458,11 +478,11 @@ body{
       }
     }
     &.tablet{
-      width: 20%;
-      height: 56%;
+      width: 14em;
+      height: 14em;
       font-size: 50%;
-      margin-top: 8%;
-      padding: 1.75% 0 0;
+      margin-top: 9.75%;
+      padding: 0 0;
 
       .ms-nav{
         width: 100%;
@@ -493,8 +513,8 @@ body{
       }
     }
     &.mobile{
-      width: 6%;
-      height: 28%;
+      width: 5em;
+      height: 8em;
       font-size: 50%;
       margin-top: 14%;
       padding: 2% 0 0;
@@ -528,6 +548,9 @@ body{
         height: 20%;
         top: 45%;
         left: 0;
+      }
+      .ms-block-5{
+        top: 84%;
       }
     }
     &.toaster{
@@ -580,8 +603,9 @@ body{
       display: block;
       text-indent: -999em;
       overflow: hidden;
-      border: 1px solid $brown;
-      border-radius: 2px;
+      opacity: .5;
+      // border: 1px solid $brown;
+      border-radius: 1px;
       @include single-transition(all, 0.5s);
     }
 
@@ -678,21 +702,17 @@ body{
   background-color: white;
   padding: 1em;
 
-  &.skinny{
-    @media only screen and (min-width: $menu-transition){
-      padding: 0;
-    }
-  }
 
   //Mixins
   @include subtle-glow();
   .details{
-
     width: 100%;
-
+    @media only screen and (max-width: $large-screen){
+      margin-top: 1.5em;
+    }
 
     @media only screen and (min-width: $small-medium){
-      height: 14em;
+      height: 16em;
     }
 
 
@@ -738,6 +758,15 @@ body{
       display: block;
       padding: 100% 0 0;
     }
+
+    &.skinny .img-container{
+      // margin: -.5em -1em 1.5em;
+      // @media only screen and (min-width: $small-medium){
+         margin: 0 -1em;
+      // }
+    }
+
+
     img{
       width:100%;
       position: absolute;
@@ -955,25 +984,36 @@ button{
   background-color: fade-out(lighten($white, 5%), .25);
   margin-bottom: 2em;
 }
+
 .more-list{
   margin-top: 0;
   margin-bottom: 1.5em;
   margin-left: 0;
   list-style: none;
 }
-.nothing-to-see{
-  color: lighten($medium-grey, 50%);
-}
-.footer{
-  height:.55em;
-  overflow: hidden;
-  font-size: 4em;
+.more-list:before{
+  content: "";
   display: block;
-  padding: 0;
-  text-align: center;
-  position: absolute;
-  bottom: -1em;
   width: 100%;
+  // height: 9.5em;
+  padding-top: 69%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% auto;
+  background-color: rgba(0,0,0,.2);
+  margin-bottom: 1.5em;
+}
+.develop-more-list:before{
+  background-image: url("/images/code.svg");
+}
+.cms-more-list:before{
+  background-image: url("/images/cms.svg");
+}
+.responsive-more-list:before{
+  background-image: url("/images/responsive.svg");
+}
+.graphic-more-list:before{
+  background-image: url("/images/graphic.svg");
 }
 
 .contact-form .input-label:first-child{
@@ -995,6 +1035,40 @@ button{
 .contact-form.submitted .thankyou{
   opacity: 1;
 }
+
+.nothing-to-see{
+  color: lighten($medium-grey, 50%);
+}
+.see-more-target{
+
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all .5s;
+  &.is-current{
+    max-height: 15em;
+    opacity: 1;
+  }
+  @media only screen and (max-width: $large-screen){
+
+    background-color: fade-out($medium-grey,.2);
+    z-index: 100;
+    position: absolute;
+  }
+}
+.footer{
+  height:.55em;
+  overflow: hidden;
+  font-size: 4em;
+  display: block;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  bottom: -1em;
+  width: 100%;
+}
+
 
 .mtl{
   margin-top: 2em;
