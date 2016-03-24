@@ -87,7 +87,6 @@
           });
         },
         submitFunc = function(e){
-          // e.stopPropagation();
           var data = $form.serializeArray();
           if(e.type === 'valid' && data[0].value === ''){
             $.ajax({
