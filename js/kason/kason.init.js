@@ -91,7 +91,7 @@
           if(e.type === 'valid' && data[0].value === ''){
             $.ajax({
               dataType: 'jsonp',
-              url: "http://getsimpleform.com/messages/ajax?form_api_token=" + tk,
+              url: "//getsimpleform.com/messages/ajax?form_api_token=" + tk,
               data: $form.serialize()
             }).done(doneFunc);
             formGA('Success');
