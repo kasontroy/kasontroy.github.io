@@ -95,8 +95,6 @@
               data: $form.serialize()
             }).done(doneFunc);
             formGA('Success');
-          } else {
-            formGA('Fail');
           }
           e.preventDefault();
         },
