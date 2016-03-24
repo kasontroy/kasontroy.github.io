@@ -2,7 +2,6 @@
 
     "use strict";
 
-    // Tabbed Widget
     var mobileMenuButton     =   $("#mobile-menu-button"),
         responsiveDemonstration =   $("#responsive-demonstration"),
         updateability =   $("#updateability"),
@@ -26,7 +25,6 @@
             responsiveDemonstration.find('.device').eq(0).addClass('is-current');
             setInterval(setNextResponsive,2000);
         }
-
     }
     function updateabilityInit(){
         if (updateability.length > 0){
@@ -80,6 +78,14 @@
       var $form = $('#contact-form'),
         $thankyou = $('#contact-form #thankyou'),
         tk = "d08ba1883e084b39a46121546accac87",
+        formGA = function(label){
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'Form',
+            eventAction: 'click',
+            eventLabel: label
+          });
+        },
         submitFunc = function(e){
           // e.stopPropagation();
           var data = $form.serializeArray();
@@ -89,13 +95,14 @@
               url: "http://getsimpleform.com/messages/ajax?form_api_token=" + tk,
               data: $form.serialize()
             }).done(doneFunc);
+            formGA('Success');
+          } else {
+            formGA('Fail');
           }
-
           e.preventDefault();
         },
         doneFunc = function(e){
           $form.find("input, select, textarea, button").prop("disabled",true);
-
           $form.addClass('submitted');
         };
 
@@ -110,8 +117,6 @@
         seeMoreInit();
         console.log("You should probably just email me at kason@kason.es already :p");
     }
-
-
 
     init();
 
