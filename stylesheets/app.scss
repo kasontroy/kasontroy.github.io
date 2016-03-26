@@ -713,13 +713,13 @@ body{
       height: 16em;
     }
 
-    li {
+    ul li {
       font-size: .75em;
     }
 
 
     @media #{$small}{
-      li {
+      ul li {
         font-size: 1em;
       }
       .no-touch & {
