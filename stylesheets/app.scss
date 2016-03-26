@@ -713,8 +713,11 @@ body{
       height: 16em;
     }
 
+    font-size: .75em;
+
 
     @media #{$small}{
+      font-size: 1em;
       .no-touch & {
         margin-top: 0;
         padding: 1em;
