@@ -1,1 +1,1 @@
-callback({"progress":3720.31});
+{"progress":3720.31}
