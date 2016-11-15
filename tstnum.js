@@ -1,1 +1,1 @@
-{"progress":3720.31}
+{"progress":48000}
