@@ -1,3 +1,5 @@
+---
+---
 (function ($, document, undefined) {
 
     "use strict";
@@ -77,7 +79,7 @@
     function contactInit(){
       var $form = $('#contact-form'),
         $thankyou = $('#contact-form #thankyou'),
-        tk = "d08ba1883e084b39a46121546accac87",
+        // tk = "d08ba1883e084b39a46121546accac87",
         formGA = function(label){
           ga('send', {
             hitType: 'event',
@@ -90,8 +92,10 @@
           var data = $form.serializeArray();
           if(e.type === 'valid' && data[0].value === ''){
             $.ajax({
-              dataType: 'jsonp',
-              url: "//getsimpleform.com/messages/ajax?form_api_token=" + tk,
+              type: 'POST',
+              // dataType: 'jsonp',
+              // url: "https://kason-api.herokuapp.com/message",
+              url: "{{ site.message_url }}",
               data: $form.serialize()
             }).done(doneFunc);
             formGA('Success');
